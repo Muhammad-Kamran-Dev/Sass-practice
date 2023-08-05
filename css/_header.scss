@@ -1,0 +1,39 @@
+.nav {
+  &-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 1em;
+    padding: 1em;
+    background-color: $brand-color;
+
+    .link {
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 700;
+      font-family: $font-primary;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: aqua;
+        width: 0%;
+        height: 2px;
+        transition: width 0.3s ease-in;
+        border-radius: 10px;
+      }
+      &:hover::after,
+      &:focus {
+        color: $hover-color;
+      }
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+}

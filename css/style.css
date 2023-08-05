@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 1em;
+  padding: 1em;
+  background-color: orange;
+}
+.nav-list .link {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: cursive;
+  position: relative;
+}
+.nav-list .link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: aqua;
+  width: 0%;
+  height: 2px;
+  transition: width 0.3s ease-in;
+  border-radius: 10px;
+}
+.nav-list .link:hover::after, .nav-list .link:focus {
+  color: blue;
+}
+.nav-list .link:hover::after {
+  width: 100%;
+}
+
+.hero {
+  height: calc(100vh - 81px);
+  background: url("/img/bg.jpg");
+  background-size: cover;
+  background-position: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: cursive;
+  gap: 2em;
+  padding-left: 2em;
+}
+.hero-title {
+  font-size: 2rem;
+  color: orange;
+}
+.hero-body {
+  font-size: 1rem;
+  color: #fff;
+  width: 100%;
+}
+.hero-cta {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.hero-cta .btn {
+  border: 0;
+  color: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  font-weight: 900;
+  background: transparent;
+}
+.hero-cta .btn:hover {
+  cursor: pointer;
+  color: #007585;
+}
+.hero-cta .btn-secondary {
+  border: 2px solid orange;
+}
+.hero-cta .btn-primary {
+  background-color: orange;
+}
+
+@media screen and (min-width: 550px) {
+  :root {
+    font-size: 1.5rem;
+  }
+  .nav-list {
+    justify-content: start;
+    padding: 1em 2em;
+  }
+  .hero-body {
+    width: 50%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,12 @@
+@media screen and (min-width: 550px) {
+  :root {
+    font-size: 1.5rem;
+  }
+  .nav-list {
+    justify-content: start;
+    padding: 1em 2em;
+  }
+  .hero-body {
+    width: 50%;
+  }
+}

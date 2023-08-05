@@ -1,0 +1,52 @@
+.hero {
+  height: calc(100vh - 81px);
+  background: url("/img/bg.jpg");
+  background-size: cover;
+  background-position: left;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: $font-primary;
+  gap: 2em;
+  padding-left: 2em;
+
+  &-title {
+    font-size: 2rem;
+    color: $brand-color;
+  }
+
+  &-body {
+    font-size: 1rem;
+    color: #fff;
+    width: 100%;
+  }
+  &-cta {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+
+    & .btn {
+      border: 0;
+      color: #fff;
+      font-family: inherit;
+      font-size: 1rem;
+      padding: 0.5em 1em;
+      border-radius: 8px;
+      font-weight: 900;
+      background: transparent;
+
+      &:hover {
+        cursor: pointer;
+        color: #007585;
+      }
+    }
+
+    & .btn-secondary {
+      border: 2px solid $brand-color;
+    }
+    & .btn-primary {
+      background-color: $brand-color;
+    }
+  }
+}

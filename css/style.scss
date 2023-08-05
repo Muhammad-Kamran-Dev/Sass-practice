@@ -1,0 +1,11 @@
+$brand-color: orange;
+$hover-color: blue;
+$font-primary: cursive;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@import "./_header.scss";
+@import "./_hero.scss";
+@import "./_mediaQueries.scss";
